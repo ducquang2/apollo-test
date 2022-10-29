@@ -35,7 +35,8 @@ function DisplayCEO() {
         borderBottom: "solid 1px",
         paddingBottom: "1rem",
       }}>
-        <Link to='/launchesPast'>LaunchesPast</Link>
+        <Link to='/launchesPast'>LaunchesPast</Link> | {" "}
+        <Link to='/ships'>Ships</Link>
       </nav>
     </div>
   )

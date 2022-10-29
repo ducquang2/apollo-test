@@ -39,7 +39,8 @@ function DisplayLaunchesPast() {
           <li key={index}>
             <p><b>Misson name:</b> {item.mission_name}</p>
             <p><b>Launch date local:</b> {item.launch_date_local}</p>
-            <p>{item.launch_site.site_name_long}</p> 
+            <p><b>Launch site name:</b> {item.launch_site.site_name_long}</p> 
+            <p><b>See more at:</b> <a href={item.links.article_link}>article</a> <a href={item.links.video_link}>video</a></p>
           </li>)}
       </ul>
     </div>
