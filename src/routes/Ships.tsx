@@ -39,7 +39,7 @@ function DisplayShips() {
               <li key={idx}>
                 <p>{ship.name}</p>
                 <p>{ship.home_port}</p>
-                <img style={{width: "500px"}} src={ship.image} />
+                <img style={{width: "500px"}} src={ship.image} alt={ship.home_port} />
               </li>
             )}</ul>
           </li>
