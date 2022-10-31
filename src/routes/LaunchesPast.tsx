@@ -26,7 +26,10 @@ const GET_LAUNCHESPAST = gql`
 `
 
 function DisplayLaunchesPast() {
-  const { loading, error, data } = useQuery(GET_LAUNCHESPAST);
+  const { loading, error, data } = useQuery(GET_LAUNCHESPAST, {
+    fetchPolicy: 'network-only',
+    nextFetchPolicy: 'cache-first'
+  });
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error: ${error.message}</p>

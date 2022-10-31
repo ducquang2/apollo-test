@@ -38,7 +38,10 @@ const GET_CEOS = gql`
 `;
 
 function DisplayCEO() {
-  const { loading, error, data } = useQuery(GET_CEOS);
+  const { loading, error, data } = useQuery(GET_CEOS, {
+    fetchPolicy: 'network-only',
+    nextFetchPolicy: 'cache-first'
+  });
 
   if (loading) return <p>Loading ...</p>;
   if (error) return <p>Error ${error.message}</p>

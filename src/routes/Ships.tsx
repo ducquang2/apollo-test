@@ -23,7 +23,10 @@ const GET_SHIPS = gql`
 `
 
 function DisplayShips() {
-  const { loading, error, data } = useQuery(GET_SHIPS);
+  const { loading, error, data } = useQuery(GET_SHIPS, {
+    fetchPolicy: 'network-only',
+    nextFetchPolicy: 'cache-first'
+  });
 
   if (loading) return <p>Loading ...</p>
   if (error) return <p>Error: ${error.message}</p>
